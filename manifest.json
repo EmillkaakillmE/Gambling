@@ -1,0 +1,19 @@
+  {
+    "name": "Gambling App",
+    "version": "1.0",
+    "description": "An app that helps you to cheat, Dima!",
+    "manifest_version": 2,
+    "background": {
+      "scripts": ["background/background.js"],
+      "persistent": false
+    },
+    "page_action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://1woog.top/casino/play/spribe_aviator/*"],
+        "js": ["content/script.js"]
+      }
+    ]
+  }
